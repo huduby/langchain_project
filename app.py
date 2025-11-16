@@ -6,11 +6,9 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain_core.runnables import RunnablePassthrough, RunnableParallel
-from langchain_core.prompts  import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.runnables import RunnableLambda
+from langchain_core.runnables import RunnablePassthrough
+from langchain_core.prompts  import ChatPromptTemplate
 
-from langchain_core.prompts import MessagesPlaceholder
 import streamlit as st
 
 from dotenv import load_dotenv # .env 파일의 환경변수를 자동으로 불러오기 위한 모듈

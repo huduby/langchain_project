@@ -51,7 +51,7 @@
   * `FAISS`
   * `OpenAIEmbeddings`
   * `ChatOpenAI`
-  * `RunnablePassthrough`, `RunnableParallel`, `RunnableLambda`
+  * `RunnablePassthrough`, `RunnableParallel`
 * **OpenAI API**
 * **환경변수 관리:** `python-dotenv`
 
@@ -93,27 +93,6 @@
 
 ---
 
-## 📁 프로젝트 구조 (예시)
-
-```text
-.
-├── app.py           # 본 README가 설명하는 Streamlit 앱
-├── README.md        # 이 파일
-└── .env             # OpenAI API 키 등 환경변수 (gitignore 권장)
-```
-
-`.env` 파일과 같은 민감 정보는 **반드시 `.gitignore`에 추가**해 주세요.
-
-예시:
-
-```gitignore
-.env
-*.pyc
-__pycache__/
-```
-
----
-
 ## ⚠️ 주의 사항
 
 * 이 앱은 **업로드된 PDF의 내용에만 의존**합니다.
@@ -127,11 +106,7 @@ __pycache__/
 ## 🔮 앞으로 확장 아이디어
 
 * 여러 개의 보험 약관 PDF를 동시에 관리하고, 약관별로 선택해서 질답하기
-* 질문별로 사용된 **원문 조항 하이라이트** 기능 추가
 * 사용자별 약관 히스토리 관리 (세션 저장소/DB 연동)
-* 모바일 화면 최적화 UI 튜닝
+* 이전 대화 저장을 통한 맥락 유지 기능 (ConversationSummaryMemory 사용)
 
 ---
-
-원하는 방향이나 추가 기능이 있으면, 이 README에 “기능 추가” 섹션을 따로 만들어서 적어 두는 것도 좋습니다.
-필요하면 `requirements.txt` 초안도 같이 만들어 줄게요.
