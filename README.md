@@ -55,62 +55,6 @@
 * **OpenAI API**
 * **환경변수 관리:** `python-dotenv`
 
----
-
-## 📦 설치 및 실행 방법
-
-### 1. 저장소 클론
-
-```bash
-git clone https://github.com/<YOUR_USERNAME>/<YOUR_REPO_NAME>.git
-cd <YOUR_REPO_NAME>
-```
-
-### 2. 가상환경 생성(선택)
-
-```bash
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-```
-
-### 3. 필요한 패키지 설치
-
-`requirements.txt`를 별도로 만들었다면:
-
-```bash
-pip install -r requirements.txt
-```
-
-없다면, 최소 필요 패키지는 예시로 아래와 같습니다.
-
-```bash
-pip install streamlit langchain langchain-community langchain-openai \
-            langchain-text-splitters faiss-cpu python-dotenv pypdf
-```
-
-> 💡 FAISS 설치가 OS별로 다르게 동작할 수 있으니, 문제가 생기면
-> `faiss-cpu` 대신 OS에 맞는 패키지를 별도로 확인해 주세요.
-
-### 4. OpenAI API 키 설정
-
-프로젝트 루트에 `.env` 파일을 만들고 다음 내용을 추가합니다.
-
-```env
-OPENAI_API_KEY=your_openai_api_key_here
-```
-
-또는 시스템 환경변수로 직접 `OPENAI_API_KEY`를 설정해도 됩니다.
-
-### 5. 앱 실행
-
-```bash
-streamlit run app.py
-```
-
-> 파일명이 `app.py`가 아니라면, 실제 파이썬 파일 이름으로 변경하세요.
-
----
-
 ## 💻 사용 방법
 
 1. 앱 접속 후 상단에 **"🔍 AI 보험 약관 Q&A"** 화면이 표시됩니다.
