@@ -44,7 +44,7 @@ def build_vector_db(uploaded_file):
 # --------------------------------------------------
 #  RAG 기반 답변 생성
 # --------------------------------------------------
-def get_response(query, vectorstore,chat_history):
+def get_response(query, vectorstore):
     llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.0)
     retriever = vectorstore.as_retriever(search_kwargs={"k": 3}) 
     system_prompt = (
@@ -149,6 +149,6 @@ if query and st.session_state.vectorstore is not None:
     # AI 답변 생성
     with st.chat_message("assistant"):
         with st.spinner("약관에서 답을 찾는 중입니다..."):
-            answer = get_response(query, st.session_state.vectorstore,st.session_state.chat_history)
+            answer = get_response(query, st.session_state.vectorstore)
             st.markdown(answer)
             st.session_state.chat_history.append({"role": "assistant", "content": answer})
